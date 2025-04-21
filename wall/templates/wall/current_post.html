@@ -1,0 +1,16 @@
+{% extends 'wall/base.html' %}
+
+{% block title %}
+    <h1>{{ post.title }}</h1>
+    <p class="author">By <a href="{% url 'profile' user_id=post.author.id %}">{{ post.author }} </a>{{ post.date }}</p>
+{% endblock %}
+
+{% block content %}
+    <div class="post">
+        <p>{{ post.text|linebreaksbr }}</p>
+    </div>
+    {% if user == post.author %}
+        <a class="btn" href="{% url 'edit_post' pk=post.pk %}">Edit</a>
+    {% endif %}
+    <button onclick="window.location.href = '{% url 'all_posts' %}';" class="btn">Back</button>
+{% endblock %}

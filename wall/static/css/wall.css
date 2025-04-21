@@ -1,0 +1,89 @@
+.head-menu {
+    background-color: #f9ffd0;
+    padding: 10;
+    text-align:left;
+}
+
+.head-menu h1, .head-menu a {
+    color: #010d10;
+    font-size: 140%;
+    font-family: 'Roboto';
+    display:inline-block;
+    padding-left: 20;
+    padding-right: 20;
+    padding-bottom: 0;
+}
+
+.head-menu h1 a:hover{
+    color: #ff8f68
+}
+
+body, .alert {
+    background-color: #010d10;
+    color: #f9ffd0;
+    font-family: 'Maven Pro';
+    text-align:left;
+}
+
+a {
+    text-decoration: none;
+    color: #ff8f68;
+    padding: 5px;
+}
+
+a:hover {
+    color: #7bffe9;
+}
+
+h1, h1 a, h1 a:visited, .btn {
+    font-family: 'Archivo Narrow';
+}
+
+.title {
+    padding: 20;
+    text-align:center;
+}
+
+.btn  {
+    background-color: #f9ffd0;
+    color: 010d10;
+    padding: 5px 32px;
+    text-align: center;
+    font-size: 150%;
+    float: right;
+    margin: 5;
+}
+
+.btn:hover {
+    background-color: #212d30;
+}
+
+.cancel:hover {
+    background-color: #ff1111;
+}
+
+.post {
+    margin-bottom: 70px;
+}
+
+.author {
+    color: #757474;
+    font-size: 80%;
+    font-style: italic;
+}
+
+.author a{
+    color: #ffc77e;
+    font-size: 120%;
+    font-style: normal;
+}
+
+label {
+    font-size: 120%;
+}
+
+input, textarea  {
+    background-color: #f9ffd0;
+    font-size: 120%;
+    width: 100%;
+}

@@ -1,0 +1,13 @@
+{% extends 'wall/base.html' %}
+
+{% block title %}
+    <h1>{{title}}</h1>
+{% endblock %}
+
+{% block content %}
+    <form method="POST" class="post-form">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn">Save</button>
+    </form>
+    <button onclick="window.location.href = '{% url 'all_posts' %}';" class="cancel btn">Cancel</button>
+{% endblock %}

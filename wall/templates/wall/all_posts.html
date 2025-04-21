@@ -1,0 +1,18 @@
+{% extends 'wall/base.html' %}
+
+{% block title %}
+    <h1>{{title}}</h1>
+    {% if user.is_authenticated %}
+        <button onclick="window.location.href = '{% url 'new_post' %}';" class="btn">Add post</button>
+    {% endif %}
+{% endblock %}
+
+{% block content %}
+    {% for post in posts %}
+        <div class="post">
+            <h1><a href="{% url 'current_post' pk=post.pk %}">{{ post.title }}</a></h1>
+            <p class="author">By <a href="{% url 'profile' user_id=post.author.id %}">{{ post.author }}</a>{{ post.date }}</p>
+            <p>{{ post.text|linebreaksbr }}</p>
+        </div>
+    {% endfor %}
+{% endblock %}
